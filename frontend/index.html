@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 150px 1fr 150px 1fr;
+            column-gap: 15px;
+            row-gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        form input, form select, form button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            grid-column: span 4;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #f7f7f7;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+            }
+
+            form label {
+                text-align: left;
+            }
+
+            form button {
+                grid-column: span 1;
+            }
+
+            th, td {
+                font-size: 0.9rem;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Exams List</h1>
+<form id="filtersForm">
+    <label for="location_name">Location Name:</label>
+    <input type="text" id="location_name" name="location_name" value="">
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="">
+
+    <label for="candidate_name">Candidate Name:</label>
+    <input type="text" id="candidate_name" name="candidate_name" value="">
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value="">
+
+    <label for="longitude_min">Longitude Min:</label>
+    <input type="number" id="longitude_min" name="longitude_min" value="">
+
+    <label for="longitude_max">Longitude Max:</label>
+    <input type="number" id="longitude_max" name="longitude_max" value="">
+
+    <label for="latitude_min">Latitude Min:</label>
+    <input type="number" id="latitude_min" name="latitude_min" value="">
+
+    <label for="latitude_max">Latitude Max:</label>
+    <input type="number" id="latitude_max" name="latitude_max" value="">
+
+    <label for="sort_by">Sort By:</label>
+    <select id="sort_by" name="sort_by">
+        <option value="id" selected>ID</option>
+        <option value="Date">Date</option>
+        <option value="Title">Title</option>
+        <option value="LocationName">Location Name</option>
+        <option value="CandidateName">Candidate Name</option>
+        <option value="Candidateid">Candidate ID</option>
+       
+    </select>
+
+    <label for="sort_order">Sort Order:</label>
+    <select id="sort_order" name="sort_order">
+        <option value="desc" selected>Descending</option>
+        <option value="asc">Ascending</option>
+    </select>
+
+    <button type="button" id="fetchButton">Fetch Exams</button>
+</form>
+
+<div class="table-container">
+    <table id="examsTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Location Name</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script>
+    document.getElementById('fetchButton').addEventListener('click', async function(event) {
+        event.preventDefault();
+        const filters = {
+            filters: {
+                location_name: document.getElementById('location_name').value,
+                title: document.getElementById('title').value,
+                candidate_name: document.getElementById('candidate_name').value,
+                description: document.getElementById('description').value,
+                longitude_min: document.getElementById('longitude_min').value,
+                longitude_max: document.getElementById('longitude_max').value,
+                latitude_min: document.getElementById('latitude_min').value,
+                latitude_max: document.getElementById('latitude_max').value,
+                sort_by: document.getElementById('sort_by').value,
+                sort_order: document.getElementById('sort_order').value,
+            }
+        };
+
+        try {
+            const response = await fetch('http://localhost/exam6/list', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(filters),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            if (data.status) {
+                populateTable(data.data);
+            } else {
+                alert('Error fetching data: ' + data.message);
+            }
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    });
+
+    function populateTable(exams) {
+        const tableBody = document.getElementById('examsTable').querySelector('tbody');
+        tableBody.innerHTML = '';
+        exams.forEach((exam, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${exam.CandidateName}</td>
+                <td>${exam.Title}</td>
+                <td>${exam.Description}</td>
+                <td>${exam.LocationName}</td>
+                <td>${exam.Longitude}</td>
+                <td>${exam.Latitude}</td>
+                <td>${exam.Date}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    }
+</script>
+</body>
+</html>

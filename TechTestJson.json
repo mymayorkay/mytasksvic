@@ -1,0 +1,224 @@
+{
+  "Exams": [
+    {
+      "id": 0,
+      "Title": "VICTVS1",
+      "Description": "VICTVS Exam 1",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 1,
+      "Title": "VICTVS2",
+      "Description": "VICTVS Exam 2",
+      "Candidateid": 1,
+      "CandidateName": "Donnelly",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "Sydney",
+      "Latitude": "-33.868820",
+      "Longitude": "151.209290"
+    },
+    {
+      "id": 2,
+      "Title": "VICTVS3",
+      "Description": "VICTVS Exam 3",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 3,
+      "Title": "VICTVS4",
+      "Description": "VICTVS Exam 4",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 4,
+      "Title": "VICTVS5",
+      "Description": "VICTVS Exam 5",
+      "Candidateid": 2,
+      "CandidateName": "Ward",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "Berlin",
+      "Latitude": "52.520008",
+      "Longitude": "13.404954"
+    },
+    {
+      "id": 5,
+      "Title": "VICTVS6",
+      "Description": "VICTVS Exam 6",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 6,
+      "Title": "VICTVS7",
+      "Description": "VICTVS Exam 7",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 7,
+      "Title": "VICTVS8",
+      "Description": "VICTVS Exam 8",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 8,
+      "Title": "VICTVS9",
+      "Description": "VICTVS Exam 9",
+      "Candidateid": 1,
+      "CandidateName": "Donnelly",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "Sydney",
+      "Latitude": "-33.868820",
+      "Longitude": "151.209290"
+    },
+    {
+      "id": 9,
+      "Title": "VICTVS10",
+      "Description": "VICTVS Exam 10",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 10,
+      "Title": "VICTVS11",
+      "Description": "VICTVS Exam 11",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 11,
+      "Title": "VICTVS12",
+      "Description": "VICTVS Exam 12",
+      "Candidateid": 2,
+      "CandidateName": "Ward",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "Berlin",
+      "Latitude": "52.520008",
+      "Longitude": "13.404954"
+    },
+    {
+      "id": 12,
+      "Title": "VICTVS13",
+      "Description": "VICTVS Exam 13",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 13,
+      "Title": "VICTVS14",
+      "Description": "VICTVS Exam 14",
+      "Candidateid": 3,
+      "CandidateName": "Mateos",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "New York",
+      "Latitude": "40.713051",
+      "Longitude": "-74.007233"
+    },
+    {
+      "id": 14,
+      "Title": "VICTVS15",
+      "Description": "VICTVS Exam 15",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 15,
+      "Title": "VICTVS16",
+      "Description": "VICTVS Exam 16",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 16,
+      "Title": "VICTVS17",
+      "Description": "VICTVS Exam 17",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 17,
+      "Title": "VICTVS18",
+      "Description": "VICTVS Exam 18",
+      "Candidateid": 3,
+      "CandidateName": "Mateos",
+      "Date": "05/05/2023 14:30:00",
+      "LocationName": "New York",
+      "Latitude": "40.713051",
+      "Longitude": "-74.007233"
+    },
+    {
+      "id": 18,
+      "Title": "VICTVS19",
+      "Description": "VICTVS Exam 19",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "17/06/2023 16:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    },
+    {
+      "id": 19,
+      "Title": "VICTVS20",
+      "Description": "VICTVS Exam 20",
+      "Candidateid": 0,
+      "CandidateName": "Wilmers",
+      "Date": "25/08/2023 09:30:00",
+      "LocationName": "London",
+      "Latitude": "51.507351",
+      "Longitude": "-0.127758"
+    }
+  ]
+}
