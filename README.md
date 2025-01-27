@@ -1,6 +1,6 @@
 # Exam List
 
-Welcome to the **Exam List** project! This repository contains the code for a web application designed to simplify task management.  
+Welcome to the **Exam List** project! This repository contains the code for a web application designed to simplify Exam List.  
 
 ---
 
