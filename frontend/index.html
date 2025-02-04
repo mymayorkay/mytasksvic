@@ -145,7 +145,7 @@
         <option value="desc" selected>Descending</option>
         <option value="asc">Ascending</option>
     </select>
-
+    <!-- <! –– A button to fetch the exams. ––> -->
     <button type="button" id="fetchButton">Fetch Exams</button>
 </form>
 
@@ -168,6 +168,7 @@
 </div>
 
 <script>
+    //    Listens for a button click.
     document.getElementById('fetchButton').addEventListener('click', async function(event) {
         event.preventDefault();
         const filters = {
@@ -184,7 +185,7 @@
                 sort_order: document.getElementById('sort_order').value,
             }
         };
-
+//Sends a request to the API.
         try {
             const response = await fetch('http://localhost/exam6/list', {
                 method: 'POST',
@@ -208,7 +209,7 @@
             console.error('Fetch error:', error);
         }
     });
-
+//Populates the table with exam data.
     function populateTable(exams) {
         const tableBody = document.getElementById('examsTable').querySelector('tbody');
         tableBody.innerHTML = '';

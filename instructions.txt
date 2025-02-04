@@ -1,1 +1,8 @@
 Front End Link:http://localhost/exam6/frontend/index.html
+
+
+
+
+index.php handles API requests.
+TechTestJson.json stores exam data.
+frontend/index.html provides a UI for filtering and displaying exams.
